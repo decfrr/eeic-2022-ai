@@ -32,8 +32,7 @@ def main():
 	print('')
 
 	# Set up a neural network to train
-	net = MLP(args.unit, 28*28, 10)
-	#net = MnistCNN(10)
+	net = MnistCNN(10)
 
 	# Load designated network weight 
 	if args.resume:

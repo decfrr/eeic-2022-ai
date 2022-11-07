@@ -84,7 +84,7 @@ def main():
 			if args.gpu >= 0:
 				inputs = inputs.to(device)
 				labels = labels.to(device)
-			# Reshape the input 
+			# Reshape the input
 			inputs = inputs.view(-1, 28*28)
 			# Reset the parameter gradients
 			optimizer.zero_grad()

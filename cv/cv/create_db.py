@@ -25,6 +25,7 @@ def createDatabase(paths, gpu):
 	model = model.to(device)
 	# Get features
 	with torch.no_grad():
+		#
 		features = torch.cat(
 			[model(data_preprocess(Image.open(path, 'r').convert('RGB')).unsqueeze(0).to(device)).to('cpu')
 				for path in paths],
